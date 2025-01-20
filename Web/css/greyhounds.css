@@ -1,0 +1,147 @@
+body {
+  background-color: red;
+}
+
+h1 {
+  color: black;
+  font-size: 124px;
+}
+
+.header{
+    background-color: red;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+.panel {
+    position:absolute;
+    top: 20px;
+    left:50px;
+}
+
+.leftPanel{
+    background-color: red;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.rightPanel{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.button {
+  background-color: #a83234;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+
+.button1 {
+  background-color: #a83234;
+  border: none;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.red{
+	background-color: #a83234;
+}
+
+.green{
+	background-color: green;
+}
+
+.blue{
+	background-color: blue;
+}
+
+.button2 {
+  background-color: #a83234;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  margin-top: 10px;
+  border-radius: 24px;
+  border-width: 5px;
+}
+
+.blankRow {
+	height: 30px;
+}
+
+.timeDisplay {
+	width: 80%; 
+    height: auto;
+    margin: 0 auto;
+    padding-top: 100px;
+    position: relative;
+}
+
+.stopwatchButton {
+	font-size: 64px;
+	margin: 4px 2px;
+	margin-top: 10px;
+	border-radius: 24px;
+	border-width: 5px;
+}
+
+.start {
+	background-color: #4CAF50;
+}
+
+.stop {
+	background-color: #a83234;
+}
+
+.reset {
+	background-color: gray;
+}
+
+.inputLabel {
+	color: Dark-Red;
+	font-size: 24px;
+}
+
+.dropDownLabel {
+	color: white;
+	font-size: 24px;
+}
+
+.dropDown {
+	font-size: 24px;
+}
+
+input[type="text"]
+{
+	width: 100%;
+	margin-bottom: 5px;
+	border-radius: 12px;
+    font-size:40px;
+	font-family: "Lucida Console", "Courier New", monospace;
+	text-decoration: underline;
+}
+

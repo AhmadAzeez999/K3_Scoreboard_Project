@@ -1,0 +1,211 @@
+<!-- Change script tag at the bottom to point to index-->
+<!-- change file name it index.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+    <script type="text/javascript" src="js\jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js\bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css\OAC_css.css">
+    
+    <title>Dashboard</title>
+
+  </head>
+
+  <body>
+  <div class="col-md-12">
+	<div class="row">
+		<div class="col-md-3 header">
+			<div><img src="css\OAC_logo.png" class=""></div>
+		</div>
+		<div class="col-md-9 header">
+		</div>
+	</div>
+    <div class="row">
+	    <div class="col-md-3 leftPanel" id="leftPanel">
+		<!--	<div><button class="button btn-block" id="tickerStatus" onclick="changeTickerStatus();">
+			<span> Ticker:</span>
+			<span id='t_on'>On</span>
+			<span id='t_off'>Off</span>
+		  </button></div> -->
+		  <div><button class="button btn-block" id="countdownB" onclick="chooseRightPanel('countdownP', 'countdownB');">Countdown</button></div>
+		  <div><button class="button btn-block" id="stopWatchB" onclick="chooseRightPanel('stopWatch', 'stopWatchB'); displayStopWatch();">Stop Watch</button></div>
+		  <div><button class="button btn-block" id="scrollTextB" onclick="chooseRightPanel('scrollText', 'scrollTextB');">Scroll Text</button></div>
+		
+		  <div><button class="button btn-block" id="optionsB" onclick="chooseRightPanel('optionsP', 'optionsB');">Options</button></div>
+		  <div><button class="button btn-block" id="displayAssist" onclick="toggleDisplayAssist();">
+			<span>Time Of Day</span>
+			<span id='on'></span>
+			<span id='off'></span>
+		  </button></div>
+		 </div>
+        
+	    <div class="col-md-9" id="rightPanel">
+		    <div class="panel col-md-10" id="scrollText">		
+	
+			
+			<div class="row"><span class="inputLabel2">Top</span></div>
+			<div class="row">
+                <div class="col-md-4">
+					<span>
+						<input type='text' id='staticTextInputT' maxlength="100">
+					</span>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postColor('{');">Clear Top </button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('scrollT');">Scroll Top</button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('pauseT');">Pause Top</button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('staticT');">static Top</button>
+				</div>	
+			</div>
+			
+			<div class="row"><span class="inputLabel2">BOTTOM</span></div>
+			<div class="row">
+                <div class="col-md-4">
+					<span>
+						<input type='text' id='staticTextInputB' maxlength="100">
+					</span>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postColor('}');">Clear Bot. </button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('scrollB');">Scroll Bot.</button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('pauseB');">Pause Bot.</button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('staticB');">static Bot.</button>
+				</div>	
+			</div>
+			
+			<div class="row"><span class="inputLabel2">Big</span></div>
+			<div class="row">
+                <div class="col-md-4">
+					<span>
+						<input type='text' id='staticTextInputBig' maxlength="100">
+					</span>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postColor('*');">Clear BIG</button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('scrollBig');">Scroll BIG</button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('pauseBig');">pause BIG</button>
+				</div>	
+				<div class="col-md-2">
+					<button class="button2 btn-block" onclick="postPauseText('staticBig');">static BIG</button>
+				</div>	
+			</div>
+		</div>	
+		<div class="panel col-md-10" id="countdownP">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-12">
+							<button class="stopwatchButton start" onclick="startCountdown();">Start</button>
+							<button class="stopwatchButton stop" onclick="pauseCountdown();">Pause</button>
+							<button class="stopwatchButton reset" onclick="postColor('X');">Reset</button>
+							<button class="stopwatchButton show" onclick="showCountdown();">Show</button>
+							<button class="col-md-2 stopwatchButton reset" onclick="postColor('0');">0</button>
+						</div>
+					</div>	
+					<div class="row">
+						<div class="col-md-6">						
+								<div class="col-md-8">
+									<span class="inputLabel3">Quick Loads</span>
+								</div>
+								<div class="col-md-12">
+									<button class="col-md-3 stopwatchButton show" onclick="postColor('1');">1</button>
+									<button class="col-md-3 stopwatchButton show" onclick="postColor('2');">2</button>
+									<button class="col-md-3 stopwatchButton show" onclick="postColor('3');">3</button>
+								</div>
+								<div class="col-md-12">
+									<button class="col-md-5 stopwatchButton show" onclick="postColor('4');">1.5</button>
+									<button class="col-md-4 stopwatchButton show" onclick="postColor('5');">5</button>
+								</div>
+								<div class="col-md-12">
+									<button class="col-md-9 stopwatchButton start" onclick="postColor('=');">Program</button>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="col-md-12">
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('1');">1</button>
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('2');">2</button>
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('3');">3</button>
+							</div>
+							<div class="col-md-12">
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('4');">4</button>
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('5');">5</button>
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('6');">6</button>
+							</div>
+							<div class="col-md-12">
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('7');">7</button>
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('8');">8</button>
+								<button class="col-md-3 stopwatchButton reset" onclick="postColor('9');">9</button>
+							</div>	
+						</div>
+					<div class="col-md-12 hidehide">
+					<div class="row">
+						<select class="col-md-12 dropDown" name="autoDropdown" id="autoDropdown">
+							<option value="DisplayTime">Display Time</option>
+							<option value="satSchedule">Saturday Schedule</option>
+							<option value="sunSchedule">Sunday Schedule</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel col-md-10" id="stopWatch">
+			<div class="row">
+				<div class="col-md-10">
+					<div class="timeDisplay">
+						<h1><time>00:00.00</time></h1>
+						<button class="stopwatchButton start" id="start">Start</button>
+						<button class="stopwatchButton stop" id="stop">Stop</button>
+						<button class="stopwatchButton reset" id="clear">Reset</button>
+					</div>
+				</div>
+	        </div>
+		</div>
+		<div class="panel col-md-10" id="optionsP">
+			<div class="row">
+				<div class="col-md-10">
+					<div class="row">
+						<span class="inputLabel">Options</span>
+					</div>
+					<div class="row">
+						<div class="col-md-3"><button class="button1 options" onclick="postColor('>');">Brightness Down</button></div>
+						<div class="col-md-3"><button class="button1 options" onclick="postColor('<');">Brightness   Up</button></div>
+						<div class="col-md-3"><button class="button1 options" onclick="postColor('*');">Clear Display</button></div>
+						<div class="col-md-3"><button class="button1 options" onclick="postColor('%');">Default Message</button></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3"><button class="button1 options" onclick="postColor('.');">Countdown Option Toggle***</button></div>
+						<div class="col-md-3"><button class="button1 options" onclick="postColor(',');">Show Scoreboard IP Address***</button></div>
+						<div class="col-md-3"><button class="button1 options" onclick="postColor('-');">Change Color Pattern</button></div>
+					</div>					
+				</div>
+	        </div>
+		</div>
+    </div>
+	</div>
+  </body>
+</html>
+
+<script type="text/javascript" src="dashBoard_small.js"></script>
+<!-- <script type="text/javascript" src="c:\K3_Scoreboard\index.js"></script> -->
+
+
