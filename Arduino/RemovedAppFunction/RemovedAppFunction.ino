@@ -2116,7 +2116,7 @@ void setup() {
   pinMode(16, OUTPUT);  //vPin2
 }
 
-// Calls serial monitor to know what to do and breaks into sub routines.
+//calls serial monitor to know what to do and breaks into sub routines.
 void loop() {
 
   checkInputs();

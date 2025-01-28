@@ -1,0 +1,5 @@
+static inline void sendRowRGB( uint8_t row,  uint8_t r,  uint8_t g,  uint8_t b ) {
+  sendBitx8( row, g, fullBits);      // WS2812 takes colors in GRB order
+  sendBitx8( row, r, fullBits);      // WS2812 takes colors in GRB order
+  sendBitx8( row, b, fullBits);      // WS2812 takes colors in GRB order
+}

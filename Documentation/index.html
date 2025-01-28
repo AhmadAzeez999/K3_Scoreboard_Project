@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h1>K3 Scoreboard Documentation</h1>
+            <input type="text" id="searchBar" class="search-bar" placeholder="Search...">
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <!-- <li><a href="#files">File Structure</a></li> -->
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#setup">Setup</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>This documentation provides a general overview of the project and how the codee works.</p>
+            </section>
+
+            <!-- <section id="files">
+                <h2>File Structure</h2>
+                <p>The project is organized into several files to keep the code modular and maintainable:</p>
+                <ul>
+                    <li><strong>main.ino</strong> - The main Arduino sketch.</li>
+                    <li><strong>Data.h</strong> - Data definitions and global variables.</li>
+                    <li><strong>Timer.cpp</strong> - Timer functionality implementation.</li>
+                    <li><strong>Display.cpp</strong> - Display management functions.</li>
+                    <li><strong>Remote.cpp</strong> - Remote control functionality.</li>
+                </ul>
+            </section> -->
+
+            <section id="variables">
+                <h2>Variables</h2>
+                <p>The variables that exist in the project and they are for:</p>
+                <h3>bool rOO</h3>
+                <p>This variable is used to keep track of whether the remote is on of off.</p>
+                <h3>bool rEM</h3>
+                <p>To check if the user is entering a manual countdown time for the countdown timer
+                    (I'm guessing rEm is related to "remote"? Not sure).
+                </p>
+                <h3>bool vP</h3>
+                <p>This is used as a flag to determine whether voltage should be sent out.
+                    When vP is set to true, <strong>I think</strong> the program is sending voltage to the LED,
+                    and vP is set to false, the voltage is not being sent.
+                </p>
+            </section>
+
+            <section id="functions">
+                <h2>Functions</h2>
+                <p>Here are some key functions in the project:</p>
+                
+                <div class="function" id="sendBitx8">
+                    <h3>sendBitx8(const uint8_t row, const uint8_t colorbyte, const uint8_t onBits)</h3>
+                    <p>This fuction is an embedded function written in assembly language within C code.</p>
+                    <p>It is used to send an 8-bit byte (colorbyte) to a particular port.</p>
+                    <p>It works by shifting each bit of the byte (colorbyte) and sending it over a specific hardware
+                        port with precise delays to meet timing requirements. This is used for controlling the LED.
+                    </p>
+                    <h4>Parameters:</h4>
+                    <ul>
+                        <li><b>row:</b> The row value that is controlling which LED or pixel to turn on/off.</li>
+                        <li><b>colorbyte:</b> A byte (8 bits) containing color data for the LEDs or pixels.</li>
+                        <li><b>onBits:</b> Indicates which bits of the byte are relevant and should be sent. (I think, I'm not really sure)</li>
+                    </ul>
+                    <div class="function-content">
+                        <pre id="sendBitx8-content">
+                        </pre>
+                    </div>
+                  </div>
+
+                  <div class="function" id="sendBitx8">
+                    <h3>static inline void sendRowRGB(uint8_t row,  uint8_t r,  uint8_t g,  uint8_t b)</h3>
+                    <p>This fuction is designed to send RGB color data to a specific row.</p>
+                    <h4>Parameters:</h4>
+                    <ul>
+                        <li><b>row:</b>This parameter represents the specific row of the LED to which the color data will be sent.</li>
+                        <li><b>r, g, b:</b> These represent the Red, Green, and Blue color values to be sent to the LEDs in the specified row. 
+                            Each of these values is an 8-bit number, meaning each color can have values from 0 to 255.
+                        </li>
+                    </ul>
+                    <div class="function-content">
+                        <pre id="sendRowRGB-content">
+                        </pre>
+                    </div>
+                  </div>
+
+                  <div class="function" id="sendBitx8">
+                    <h3>show()</h3>
+                    <p>This fuction just calls the <a href="https://docs.arduino.cc/language-reference/en/functions/time/delay/"><strong>delay()</strong></a> function, which is a built-in Arduino function.</p>
+                    <div class="function-content">
+                        <pre id="show-content">
+                        </pre>
+                    </div>
+                  </div>
+            </section>
+
+            <section id="setup">
+                <h2>Setup</h2>
+                <p>Follow these steps to set up the project:</p>
+                <ol>
+                    <li>To be added...</li>
+                </ol>
+            </section>
+
+            <footer>
+                <p>&copy; 2025</p>
+                <p>Team: Gurchandan Singh, Jay D Mistry, Ripanjot Singh, Wezi Kaonga, & Ahmad Azeez</p>
+                <p>Website created by <a href="https://github.com/AhmadAzeez999" target="_blank">Ahmad Azeez</a></p>
+                <p><a href="https://github.com/AhmadAzeez999/K3_Scoreboard_Project" target="_blank">Github Repository</a></p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="codeScript.js"></script>
+</body>
+</html>
