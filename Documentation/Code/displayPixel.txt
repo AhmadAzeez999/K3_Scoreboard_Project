@@ -1,0 +1,7 @@
+  void displayPixel(int row, int col)
+  {
+    strips[row].begin();
+
+    strips[row].setPixelColor(col, 255, 0, 0);
+    strips[row].show();
+  }

@@ -1,0 +1,26 @@
+  void fillBoard()
+  {
+    // Loop to light up all strips
+    for (int y = 0; y < NUMPIXELS - 60; y++) 
+    {
+      // Set red color for each strip at the same position
+      for (int i = 0; i < NUM_STRIPS; i++) 
+      {
+        strips[i].setPixelColor(y, 255, 0, 0);  // Red
+      }
+      middleStrip.setPixelColor(y, 255, 0, 0);
+    }
+    
+
+    // Loop to light up the second half of the LEDs
+    for (int y = 60; y < NUMPIXELS; y++) 
+    {
+      // Set red color for each strip at the same position
+      for (int i = 0; i < NUM_STRIPS; i++) 
+      {
+        strips[i].setPixelColor(y, 255, 0, 0);  // Red
+      }
+    }
+
+    updateAllStrips();
+  }

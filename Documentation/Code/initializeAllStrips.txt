@@ -1,0 +1,11 @@
+void initializeAllStrips()
+  {
+    // Initialize all strips
+    for (int i = 0; i < NUM_STRIPS; i++) 
+    {
+      strips[i].begin();
+      strips[i].setBrightness(50); // This could be moved to it's own function in the future
+    }
+    
+    middleStrip.begin();
+  }

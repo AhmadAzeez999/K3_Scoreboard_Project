@@ -1,0 +1,25 @@
+void clearBoard()
+  {
+      // Loop to clear all strips
+    for (int y = 0; y < NUMPIXELS - 60; y++) 
+    {
+      for (int i = 0; i < NUM_STRIPS; i++) 
+      {
+        strips[i].clear();
+      }
+
+      middleStrip.clear();
+    }
+    
+
+    // Loop to clear the second half of the LEDs
+    for (int y = 60; y < NUMPIXELS; y++) 
+    {
+      for (int i = 0; i < NUM_STRIPS; i++) 
+      {
+        strips[i].clear();
+      }
+    }
+
+    updateAllStrips();
+  }

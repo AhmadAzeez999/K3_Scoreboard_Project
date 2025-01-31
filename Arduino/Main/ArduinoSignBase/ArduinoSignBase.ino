@@ -2,7 +2,7 @@
 #include "Base.h"
 #include "Display.h"
 
-void setup() 
+void setup()
 {
   base::initializeAllStrips();
   // display::displayA(); // For displaying an A (make sure nothing is running in the loop() to test this)

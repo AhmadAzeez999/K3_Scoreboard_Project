@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>K3 Scoreboard Documentation</h3>
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#file-structure">File Structure</a></li>
+                    <li><a href="#code">Code</a>
+                        <ul>
+                            <li><a href="#base-namespace">base</a>
+                                <ul>
+                                    <li><a href="#initializeAllStrips">initializeAllStrips()</a></li>
+                                    <li><a href="#fillBoard">fillBoard()</a></li>
+                                    <li><a href="#clearBoard">clearBoard()</a></li>
+                                    <li><a href="#updateAllStrips">updateAllStrips()</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#display-namespace">display</a>
+                                <ul>
+                                    <li><a href="#displayPixel">displayPixel()</a></li>
+                                    <li><a href="#displayA">displayA()</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#setup">Setup</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>This documentation covers the code for the K3 Scoreboard project, using Arduino, LED strips, and NeoPixel control.</p>
+            </section>
+
+            <section id="file-structure">
+                <h2>File Structure</h2>
+                <p>The project consists of the following files:</p>
+                <ul>
+                    <li><code>ArduinioSignBase.ino</code></li>
+                    <li><code>Base.h</code></li>
+                    <li><code>Base.cpp</code></li>
+                    <li><code>Display.h</code></li>
+                    <li><code>Display.cpp</code></li>
+                </ul>
+            </section>
+
+            <section id="code">
+                <h2>Code</h2>
+                <p>Below are the detailed descriptions of the namespaces and functions used in the code.</p>
+
+                <section id="base-namespace">
+                    <h3>base Namespace</h3>
+                    <p>The <code>base</code> namespace contains functions to initialize, control, and manipulate the LED strips.</p>
+
+                    <div class="function" id="initializeAllStrips">
+                        <h4>initializeAllStrips()</h4>
+                        <p>Initializes all the LED strips and sets the brightness.</p>
+                        <pre id="initializeAllStrips-content">
+                        </pre>
+                    </div>
+
+                    <div class="function" id="fillBoard">
+                        <h4>fillBoard()</h4>
+                        <p>Fills the entire LED board with a red color.</p>
+                        <pre id="fillBoard-content">
+                        </pre>
+                    </div>
+
+                    <div class="function" id="clearBoard">
+                        <h4>clearBoard()</h4>
+                        <p>Clears the LED board by resetting all the LEDs.</p>
+                        <pre id="clearBoard-content">
+                        </pre>
+                    </div>
+
+                    <div class="function" id="updateAllStrips">
+                        <h4>updateAllStrips()</h4>
+                        <p>Updates all LED strips to apply the changes.</p>
+                        <pre id="updateAllStrips-content">
+                        </pre>
+                    </div>
+                </section>
+
+                <section id="display-namespace">
+                    <h3>display Namespace</h3>
+                    <p>The <code>display</code> namespace contains functions to control specific pixels on the LED board.</p>
+
+                    <div class="function" id="displayPixel">
+                        <h4>displayPixel(row, col)</h4>
+                        <p>Lights up a specific pixel in the given row and column with a red color.</p>
+                        <pre id="displayPixel-content">
+                        </pre>
+                    </div>
+                </section>
+
+            </section>
+
+            <section id="setup">
+                <h2>Setup</h2>
+                <p>To be added...</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025</p>
+        <p>Team: Gurchandan Singh, Jay D Mistry, Ripanjot Singh, Wezi Kaonga, & Ahmad Azeez</p>
+        <p>Website created by <a href="https://github.com/AhmadAzeez999" target="_blank">Ahmad Azeez</a></p>
+        <p><a href="https://github.com/AhmadAzeez999/K3_Scoreboard_Project" target="_blank">Github Repository</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="codeScript.js"></script>
+</body>
+
+</html>
